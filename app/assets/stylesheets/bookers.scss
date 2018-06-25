@@ -1,0 +1,112 @@
+// Place all the styles related to the bookers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+h2 {
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+.top p {
+	font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+th {
+	padding-bottom: 5px;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+td {
+	padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+a {
+	color: #000
+}
+h4 {
+	margin-bottom: 0;
+}
+.flash {
+	color: green;
+}
+.show-box-top p {
+	font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+.show-box-bottom .show-edit {
+	border-right: 1px solid #000;
+	padding-right: 5px;
+}
+.show-box-bottom .show-back {
+	color: #666;
+}
+.edit-title {
+	margin-bottom: 10px;
+}
+.edit-body {
+	margin-bottom: 10px;
+}
+.edit-box-bottom {
+	margin-top: 5px;
+}
+.edit-box-bottom a {
+	color: #666;
+}
+.edit-box-bottom .edit-show {
+	border-right: 1px solid #000;
+	padding-right: 5px;
+	marging-right: 5px
+}
+.edit-box-bottom .edit-back {
+	padding-left: 8px;
+}
+#error_explanation {
+	    width: 450px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+}
+#error_explanation h2 {
+	text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: #c00;
+    color: #fff
+}
+#error_explanation ul {
+	font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+    background-color: #f0f0f0;
+}
+#error_explanation h4{
+	font-size:300px;
+}
+.field_with_errors {
+	padding: 2px;
+    background-color: red;
+    display: table;
+}
+.field {
+	margin-bottom: 10px;
+}
+label {
+	display: block;
+}

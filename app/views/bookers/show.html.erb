@@ -1,0 +1,48 @@
+<div class="container">
+	<div class="low">
+		<div class="col-xs-3">
+			<div class="profile-container">
+				<%= render 'users/list', user: @user %>
+				<%= render 'bookers/list', booker: @booker %>
+			</div>
+		</div>
+		<div class="col-xs-9">
+			<% if flash[:notice] %>
+				<div class="flash">
+					<%= flash[:notice] %>
+				</div>
+			<% end %>
+			<div class="show-box-top">
+				<h2>Book detail</h2>
+				 <table class="table table-striped">
+					<thead>
+						<tr>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><%= @booker.title %></td>
+							<td><%= @booker.body %></td>
+							<% if @booker.user == current_user %>
+								<td>
+									<%= link_to edit_booker_path(@booker.id), class: "btn btn-success btn-sm" do %>
+  									<span>Edit</span>
+									<% end %>
+								</td>
+								<td>
+									<%= link_to booker_path(@booker.id), class: "btn btn-danger btn-sm destroy_#{@booker.id}",method: :delete,"data-confirm" => "本当に消しますか?" do %>
+  									<span>Destroy</span>
+									<% end %>
+								</td>
+							<% end %>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+

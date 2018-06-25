@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="low">
+		<div class="col-xs-3">
+			<div class="profile-container">
+				<%= render 'users/list', user: @user %>
+				<%= render 'bookers/list', booker: @booker %>
+			</div>
+		</div>
+		<div class="col-xs-9">
+			<div class="user-index">
+				<h2>Books</h2>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Title</th>
+								<th>Opinion</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% @post_pages.each do |booker| %>
+							<tr>
+								<td><%= attachment_image_tag booker.user, :profile_image, :fill, 100, 100, format: 'jpeg', class: "img-circle profile-img", fallback: "no_image.jpg" %></td>
+								<td><%= link_to booker.title, booker %></td>
+								<td><%= booker.body %></td>
+							</tr>
+							<% end %>
+						</tbody>
+					</table>
+			</div>
+		</div>
+	</div>
+</div>
