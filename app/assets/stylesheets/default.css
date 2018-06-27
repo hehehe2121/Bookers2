@@ -2187,7 +2187,6 @@ label {
 }
 /* BOOTSTRAP FORMS - GENERAL STYLING */
 .form-control {
-  height: auto;
   padding: 8px 12px;
   font-size: 12px;
   font-weight: 400;
@@ -2201,7 +2200,6 @@ label {
   box-shadow: none;
 }
 .form-control.input-lg {
-  height: 50px;
   font-size: 14px;
 }
 .form-control.input-sm {
@@ -4106,7 +4104,6 @@ body,
 }
 .st-menu .form-search .form-control {
   display: block;
-  height: 34px;
   padding: 21px 15px;
   color: #ffffff;
   background-color: #1b327e;
@@ -12725,9 +12722,23 @@ tr td img {
 .create-btn {
   width: 100%;
 }
+.signup-btn {
+  width: 85px;
+}
+.login-btn {
+  width: 70px;
+}
 .show-box-top .btn {
   color: #666;
 }
 .btn {
   text-transform: capitalize;
+}
+.signup-box {
+  width: 970px;
+  margin: 0 auto;
+}
+.login-box {
+  width: 970px;
+  margin: 0 auto;
 }

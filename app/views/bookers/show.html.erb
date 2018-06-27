@@ -23,16 +23,16 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td><%= @booker.title %></td>
-							<td><%= @booker.body %></td>
-							<% if @booker.user == current_user %>
+							<td><%= @book.title %></td>
+							<td><%= @book.body %></td>
+							<% if @book.user == current_user %>
 								<td>
-									<%= link_to edit_booker_path(@booker.id), class: "btn btn-success btn-sm" do %>
+									<%= link_to edit_booker_path(@book.id), class: "btn btn-success btn-sm" do %>
   									<span>Edit</span>
 									<% end %>
 								</td>
 								<td>
-									<%= link_to booker_path(@booker.id), class: "btn btn-danger btn-sm destroy_#{@booker.id}",method: :delete,"data-confirm" => "本当に消しますか?" do %>
+									<%= link_to booker_path(@book.id), class: "btn btn-danger btn-sm destroy_#{@booker.id}",method: :delete,"data-confirm" => "本当に消しますか?" do %>
   									<span>Destroy</span>
 									<% end %>
 								</td>
@@ -44,5 +44,14 @@
 		</div>
 	</div>
 </div>
+<footer>
+	<div class="container">
+		<div class="low">
+			<div class="col-xs-3 col-xs-offset-9">
+    		<p>CopyRight Infratop.inc</p>
+    	</div>
+		</div>
+	</div>
+</footer>
 
 

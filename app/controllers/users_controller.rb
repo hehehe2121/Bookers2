@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 	      redirect_to user_path(@user.id)
       else
         render :edit
-    end
+      end
     end
 
     def index
@@ -23,8 +23,18 @@ class UsersController < ApplicationController
       @users = User.all
     end
 
-    private
-	def user_params
+    before_action :correct_user, only: [:edit, :update]
+
+  private
+
+    def user_params
     	params.require(:user).permit(:name, :profile_image, :user, :user_body)
-	end
+    end
+
+    def correct_user
+    user = User.find(params[:id])
+    if current_user != user
+      redirect_to root_path
+    end
+  end
 end

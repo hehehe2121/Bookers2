@@ -10,8 +10,9 @@ class BookersController < ApplicationController
   end
 
   def show
-      @booker = Booker.find(params[:id])
-      @user = @booker.user
+      @book = Booker.find(params[:id])
+      @booker = Booker.new
+      @user = @book.user
   end
 
   def create
@@ -47,7 +48,18 @@ class BookersController < ApplicationController
       booker.destroy
       redirect_to bookers_path
   end
-  def booker_params
-      params.require(:booker).permit(:title, :body, :user_id)
+
+  before_action :correct_user, only: [:edit, :update]
+
+  private
+    def booker_params
+        params.require(:booker).permit(:title, :body, :user_id)
+    end
+
+    def correct_user
+    book = Booker.find(params[:id])
+    if current_user != book.user
+      redirect_to root_path
+    end
   end
 end
